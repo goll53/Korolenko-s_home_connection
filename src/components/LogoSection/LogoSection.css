@@ -1,0 +1,29 @@
+.lego-section {
+  width: 100%;
+  padding: 64px 24px;
+}
+
+.lego-section--white {
+  background: #ffffff;
+}
+
+.lego-section--gray {
+  background: #f3f4f6;
+}
+
+.lego-section--dark {
+  background: #1f2937;
+  color: white;
+}
+
+.lego-section__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .lego-section {
+    padding: 40px 16px;
+  }
+}

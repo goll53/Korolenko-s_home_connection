@@ -1,0 +1,34 @@
+.gallery-block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gallery-block__item {
+  aspect-ratio: 4 / 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #eef5f5;
+  border: 2px dashed #259da8;
+
+  color: #259da8;
+
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .gallery-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-block {
+    grid-template-columns: 1fr;
+  }
+}
