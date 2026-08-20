@@ -1,16 +1,13 @@
 import "./HistoryBlock.css";
 
 import LegoSection from "../LegoSection/LegoSection";
-import SectionHeader from "../SectionHeader/SectionHeader";
+
 import InfoCard from "../InfoCard/InfoCard";
 
 export default function HistoryBlock() {
   return (
     <LegoSection>
-      <SectionHeader
-        title="История объекта"
-        subtitle="Расскажите, чем интересен ваш объект"
-      />
+
 
       <div className="history-block">
         <InfoCard

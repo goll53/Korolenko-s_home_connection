@@ -1,15 +1,10 @@
 import "./TeamBlock.css";
 
 import LegoSection from "../LegoSection/LegoSection";
-import SectionHeader from "../SectionHeader/SectionHeader";
 
 export default function TeamBlock() {
   return (
     <LegoSection variant="gray">
-      <SectionHeader
-        title="Команда проекта"
-        subtitle="Добавьте участников вашей команды"
-      />
 
       <div className="team-block">
         <div className="team-block__member">

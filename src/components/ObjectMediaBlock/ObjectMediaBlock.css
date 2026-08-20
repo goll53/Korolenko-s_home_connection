@@ -1,0 +1,339 @@
+.object-media {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid #dfe5e8;
+
+  border-radius: 28px;
+
+  background: white;
+
+  box-shadow:
+    0 14px 40px
+    rgba(0, 0, 0, 0.07);
+}
+
+
+/* TABS */
+
+.object-media__tabs {
+  display: flex;
+
+  gap: 8px;
+
+  padding: 14px;
+
+  overflow-x: auto;
+
+  border-bottom:
+    1px solid #e7ebed;
+
+  background: #f7f9fa;
+}
+
+.object-media__tab {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #05285c;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.object-media__tab:hover {
+  background: #e8f4f4;
+}
+
+.object-media__tab--active {
+  background: #259da8;
+
+  color: white;
+}
+
+
+/* VIEWER */
+
+.object-media__viewer {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+
+  background: #edf5f5;
+}
+
+.object-media__content {
+  width: 100%;
+
+  min-height: 520px;
+
+  display: flex;
+}
+
+.object-media__placeholder {
+  width: 100%;
+  min-height: 520px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #ffffff,
+      #edf6f6
+    );
+}
+
+.object-media__placeholder-icon {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.08);
+
+  color: #259da8;
+
+  font-size: 40px;
+}
+
+.object-media__placeholder strong {
+  color: #05285c;
+
+  font-size: 30px;
+}
+
+.object-media__placeholder span {
+  color: #828282;
+
+  font-size: 15px;
+}
+
+
+/* ARROWS */
+
+.object-media__arrow {
+  position: absolute;
+  z-index: 5;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.92);
+
+  color: #05285c;
+
+  font-size: 24px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0, 0, 0, 0.12);
+
+  cursor: pointer;
+}
+
+.object-media__arrow--left {
+  left: 20px;
+}
+
+.object-media__arrow--right {
+  right: 20px;
+}
+
+
+/* INFO */
+
+.object-media__info {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 24px 28px;
+}
+
+.object-media__counter {
+  color: #259da8;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.object-media__info h3 {
+  margin:
+    6px 0 4px;
+
+  color: #05285c;
+
+  font-size: 22px;
+}
+
+.object-media__info p {
+  margin: 0;
+
+  color: #777;
+
+  line-height: 1.5;
+}
+
+
+/* DOTS */
+
+.object-media__dots {
+  display: flex;
+
+  gap: 8px;
+}
+
+.object-media__dot {
+  width: 9px;
+  height: 9px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #cdd5d8;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.object-media__dot--active {
+  width: 28px;
+
+  border-radius: 10px;
+
+  background: #259da8;
+}
+
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+  .object-media__viewer,
+  .object-media__content,
+  .object-media__placeholder {
+    min-height: 400px;
+  }
+
+}
+
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+  .object-media {
+    border-radius: 18px;
+  }
+
+  .object-media__viewer,
+  .object-media__content,
+  .object-media__placeholder {
+    min-height: 300px;
+  }
+
+  .object-media__placeholder {
+    padding: 30px 60px;
+  }
+
+  .object-media__placeholder-icon {
+    width: 70px;
+    height: 70px;
+
+    font-size: 30px;
+  }
+
+  .object-media__placeholder strong {
+    font-size: 22px;
+  }
+
+  .object-media__arrow {
+    width: 42px;
+    height: 42px;
+
+    font-size: 19px;
+  }
+
+  .object-media__arrow--left {
+    left: 10px;
+  }
+
+  .object-media__arrow--right {
+    right: 10px;
+  }
+
+  .object-media__info {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 20px;
+  }
+
+}

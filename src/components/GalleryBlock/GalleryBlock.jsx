@@ -1,15 +1,11 @@
 import "./GalleryBlock.css";
 
 import LegoSection from "../LegoSection/LegoSection";
-import SectionHeader from "../SectionHeader/SectionHeader";
 
 export default function GalleryBlock() {
   return (
     <LegoSection variant="white">
-      <SectionHeader
-        title="Фотогалерея"
-        subtitle="Добавьте фотографии объекта"
-      />
+
 
       <div className="gallery-block">
         <div className="gallery-block__item">

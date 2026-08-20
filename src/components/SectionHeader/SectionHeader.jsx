@@ -6,18 +6,62 @@ export default function SectionHeader({
   align = "left",
 }) {
   return (
-    <div
-      className={`section-header section-header--${align}`}
-    >
-      <h2 className="section-header__title">
-        {title}
-      </h2>
+    <header className="header">
+      <div className="header__inner">
 
-      {subtitle && (
-        <p className="section-header__subtitle">
-          {subtitle}
-        </p>
-      )}
-    </div>
+        <a
+          href="#"
+          className="header__logo"
+        >
+          <div className="header__logo-icon">
+            ТИМ
+          </div>
+
+          <div className="header__logo-text">
+            <strong>
+              Цифровой объект
+            </strong>
+
+            <span>
+              учебный проект
+            </span>
+          </div>
+        </a>
+
+
+        <nav className="header__nav">
+
+          <a href="#object">
+            Об объекте
+          </a>
+
+          <a href="#media">
+            Материалы
+          </a>
+
+          <a href="#history">
+            История
+          </a>
+
+          <a href="#gallery">
+            Галерея
+          </a>
+
+          <a href="#team">
+            Команда
+          </a>
+
+        </nav>
+
+
+        <button
+          className="header__button"
+          type="button"
+        >
+          Проекты
+        </button>
+
+      </div>
+    </header>
   );
 }

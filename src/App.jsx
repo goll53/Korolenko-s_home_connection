@@ -1,12 +1,12 @@
 import Header from "./components/SectionHeader/SectionHeader";
+
+import HeroBlock from "./components/HeroBlock/HeroBlock";
 import FlightBlock from "./components/FlightBlock/FlightBlock";
-import OrthophotoBlock from "./components/OrthophotoBlock/OrthophotoBlock";
-import ModelBlock from "./components/ModelBlock/ModelBlock";
-import PointCloudBlock from "./components/PointCloudBlock/PointCloudBlock";
+import ObjectMediaBlock from "./components/ObjectMediaBlock/ObjectMediaBlock";
 import GalleryBlock from "./components/GalleryBlock/GalleryBlock";
 import HistoryBlock from "./components/HistoryBlock/HistoryBlock";
-import TeamBlock from "./components/TeamBlock/TeamBlock";
 import TourBlock from "./components/TourBlock/TourBlock";
+import TeamBlock from "./components/TeamBlock/TeamBlock";
 
 export default function App() {
   return (
@@ -14,22 +14,19 @@ export default function App() {
       <Header />
 
       <main>
+        <HeroBlock />
 
         <FlightBlock />
 
-        <OrthophotoBlock />
-
-        <ModelBlock />
-
-        <PointCloudBlock />
-
-        <GalleryBlock />
+        <ObjectMediaBlock />
 
         <HistoryBlock />
 
-        <TeamBlock />
+        <GalleryBlock />
 
         <TourBlock />
+
+        <TeamBlock />
       </main>
     </>
   );
