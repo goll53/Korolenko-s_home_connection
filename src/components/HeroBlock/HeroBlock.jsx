@@ -147,7 +147,8 @@ export default function HeroBlock({
               </div>
 
               <strong>
-                Тут главное фото объекта
+                <img src="/main_photo.jpg"
+                alt="Главное фото объекта" />
               </strong>
 
               <span>
