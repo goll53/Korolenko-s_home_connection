@@ -2,193 +2,91 @@
   position: sticky;
   top: 0;
   z-index: 100;
-
   width: 100%;
-
-  background: rgba(255, 255, 255, 0.95);
-
-  /* Adjusted to match the design's Gray color (#D9D9D9) */
-  border-bottom: 1px solid #d9d9d9;
-
-  backdrop-filter: blur(12px);
+  background: #f8f9fa; /* Светло-серый фон */
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .header__inner {
   width: 100%;
   max-width: 1400px;
-
   margin: 0 auto;
-  padding: 16px 32px;
+  padding: 20px 32px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 40px;
 }
 
-
-/* LOGO */
-
+/* Логотип */
 .header__logo {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-
   text-decoration: none;
-}
-
-.header__logo-icon {
-  width: 46px;
-  height: 46px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 14px;
-
-  background: #259da8; /* Turquoise */
-
-  color: white;
-
-  font-size: 12px;
-  font-weight: 800;
 }
 
 .header__logo-text {
   display: flex;
   flex-direction: column;
-
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .header__logo-text strong {
-  color: #05285c; /* Navy */
-
-  font-size: 16px;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .header__logo-text span {
+  color: #6b7280;
+  font-size: 13px;
   margin-top: 4px;
-
-  /* Adjusted to match the design's Gray color (#D9D9D9) */
-  color: #d9d9d9;
-
-  /* Updated font size to match standard paragraph text (16px / Regular) */
-  font-size: 16px;
-  font-weight: 400;
 }
 
-
-/* NAV */
-
+/* Навигация */
 .header__nav {
   display: flex;
   align-items: center;
-
   gap: 30px;
 }
 
-.header__nav a {
+.header__nav-link {
   position: relative;
-
-  /* Adjusted to match the design's Dark text color (#353535) */
   color: #353535;
-
   text-decoration: none;
-
-  /* Updated to match the design's body typography (16px / Regular) */
-  font-size: 16px;
-  font-weight: 400;
-
-  transition: 0.2s;
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 6px;
+  transition: color 0.2s;
 }
 
-.header__nav a:hover {
-  /* Dynamic alternative: change to brand Orange (#FF8039) on hover for high contrast */
-  color: #ff8039;
+.header__nav-link:hover {
+  color: #259da8;
 }
 
-.header__nav a::after {
+/* Активная ссылка (синяя) */
+.header__nav-link.active {
+  color: #3B82F6;
+}
+
+.header__nav-link.active::after {
   content: "";
-
   position: absolute;
-
   left: 0;
-  bottom: -7px;
-
-  width: 0;
-  height: 2px;
-
-  /* Match the hover accent color */
-  background: #ff8039;
-
-  transition: 0.2s;
-}
-
-.header__nav a:hover::after {
+  bottom: 0;
   width: 100%;
+  height: 2px;
+  background-color: #3B82F6;
 }
 
-
-/* BUTTON */
-
-.header__button {
-  flex-shrink: 0;
-
-  border: 0;
-
-  padding: 12px 22px;
-
-  border-radius: 12px;
-
-  background: #05285c; /* Navy */
-
-  color: white;
-
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition: 0.2s;
-}
-
-.header__button:hover {
-  /* Updated hover state to use brand Turquoise (#259DA8) */
-  background: #259da8;
-}
-
-
-/* TABLET */
-
+/* Мобильная версия */
 @media (max-width: 950px) {
-
   .header__nav {
     display: none;
   }
-
 }
 
-
-/* PHONE */
-
 @media (max-width: 600px) {
-
   .header__inner {
-    padding: 12px 16px;
+    padding: 16px;
   }
-
-  .header__logo-text span {
-    display: none;
-  }
-
-  .header__button {
-    padding: 10px 16px;
-
-    /* Scaled down cleanly relative to the new 16px base size */
-    font-size: 14px;
-  }
-
 }

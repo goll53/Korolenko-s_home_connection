@@ -1,0 +1,200 @@
+.model-viewer {
+  position: relative;
+
+  width: 100%;
+  height: 600px;
+
+  overflow: hidden;
+
+  background: #f3f7f8;
+}
+
+
+/* THREE CANVAS */
+
+.model-viewer__canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.model-viewer__canvas canvas {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* LOADING */
+
+.model-viewer__loading {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  background:
+    rgba(
+      243,
+      247,
+      248,
+      0.96
+    );
+
+  color: #05285c;
+}
+
+
+.model-viewer__loading strong {
+  font-size: 20px;
+}
+
+
+.model-viewer__loading span {
+  color: #259da8;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* SPINNER */
+
+.model-viewer__spinner {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  border:
+    4px solid
+    rgba(
+      37,
+      157,
+      168,
+      0.2
+    );
+
+  border-top-color:
+    #259da8;
+
+  animation:
+    model-spinner
+    0.8s linear
+    infinite;
+}
+
+
+@keyframes model-spinner {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+/* HELP */
+
+.model-viewer__help {
+  position: absolute;
+
+  left: 20px;
+  bottom: 20px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  pointer-events: none;
+}
+
+
+.model-viewer__help span {
+  padding: 8px 12px;
+
+  border-radius: 10px;
+
+  background:
+    rgba(
+      5,
+      40,
+      92,
+      0.85
+    );
+
+  color: white;
+
+  font-size: 12px;
+
+  backdrop-filter:
+    blur(8px);
+}
+
+
+/* ERROR */
+
+.model-viewer__error {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: #f7f7f7;
+
+  color: #b42318;
+
+  font-weight: 700;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .model-viewer {
+    height: 480px;
+  }
+
+}
+
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+  .model-viewer {
+    height: 360px;
+  }
+
+
+  .model-viewer__help {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+
+  .model-viewer__help span {
+    font-size: 10px;
+  }
+
+}

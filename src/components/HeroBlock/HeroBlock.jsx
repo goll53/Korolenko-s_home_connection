@@ -8,6 +8,7 @@ export default function HeroBlock({
   image = myPhoto,
   primaryButton = "Смотреть видео",
   secondaryButton = "История дома",
+
   authors = [
     { role: "Менеджер", name: "Маранова Милослава" },
     { role: "Разработчики", name: "Харюк Андрей " },
@@ -17,8 +18,7 @@ export default function HeroBlock({
   return (
 
     <div className="hero-wrapper">
-      {/* Шапка с кнопками полностью удалена! */}
-
+      
       {/* Бирюзовый баннер */}
       <section className="hero-main">
         <div className="hero-content">
@@ -42,18 +42,8 @@ export default function HeroBlock({
         </div>
       </section>
 
-      {/* Блок Авторы проекта */}
-      <section className="hero-authors">
-        <h2 className="hero-authors-title">Авторы проекта</h2>
-        <div className="hero-authors-grid">
-          {authors.map((author, index) => (
-            <div key={index} className="hero-author">
-              <div className="hero-author-role">{author.role}</div>
-              <div className="hero-author-name">{author.name}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Секция с авторами ПОЛНОСТЬЮ УДАЛЕНА! */}
+
     </div>
   );
 }

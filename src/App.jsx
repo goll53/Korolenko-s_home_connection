@@ -5,7 +5,6 @@ import FlightBlock from "./components/FlightBlock/FlightBlock";
 import ObjectMediaBlock from "./components/ObjectMediaBlock/ObjectMediaBlock";
 import GalleryBlock from "./components/GalleryBlock/GalleryBlock";
 import HistoryBlock from "./components/HistoryBlock/HistoryBlock";
-import TourBlock from "./components/TourBlock/TourBlock";
 import TeamBlock from "./components/TeamBlock/TeamBlock";
 
 export default function App() {
@@ -23,8 +22,6 @@ export default function App() {
         <HistoryBlock />
 
         <GalleryBlock />
-
-        <TourBlock />
 
         <TeamBlock />
       </main>
