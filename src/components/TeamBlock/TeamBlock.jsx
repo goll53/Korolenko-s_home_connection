@@ -12,8 +12,8 @@ export default function TeamBlock() {
             Фото
           </div>
 
-          <h3>Участник 1</h3>
-          <p>Роль в команде</p>
+          <h3>Маранова Милослава</h3>
+          <p>Менеджер</p>
         </div>
 
         <div className="team-block__member">
@@ -21,8 +21,8 @@ export default function TeamBlock() {
             Фото
           </div>
 
-          <h3>Участник 2</h3>
-          <p>Роль в команде</p>
+          <h3>Николаенко Ирина</h3>
+          <p>Дизайнер</p>
         </div>
 
         <div className="team-block__member">
@@ -30,8 +30,8 @@ export default function TeamBlock() {
             Фото
           </div>
 
-          <h3>Участник 3</h3>
-          <p>Роль в команде</p>
+          <h3>Харюк Андрей</h3>
+          <p>Программист</p>
         </div>
       </div>
     </LegoSection>

@@ -1,166 +1,58 @@
 import "./HeroBlock.css";
+import myPhoto from './main_photo.jpg';
 
 export default function HeroBlock({
-  badge = "Объект культурного наследия",
-
-  title = "Название вашего объекта",
-
-  description =
-    "Кратко расскажите об объекте: что это за здание, где оно находится и почему оно интересно.",
-
-  location = "Город / регион",
-
-  years = "Год постройки",
-
-  team = "Название команды",
-
-  image = null,
-
-  primaryButton = "Исследовать объект",
-
-  secondaryButton = "Подробнее",
+  badge = "ЦИФРОВОЙ ДВОЙНИК",
+  title = "Дом Короленко",
+  description = "Дом Короленко - часть усадебного комплекса, созданного архитектором Лемке в 1890-е годы",
+  image = myPhoto,
+  primaryButton = "Смотреть видео",
+  secondaryButton = "История дома",
+  authors = [
+    { role: "Менеджер", name: "Маранова Милослава" },
+    { role: "Разработчик", name: "Харюк Андрей" },
+    { role: "Дизайнер", name: "Николаенко Ирина" },
+  ],
 }) {
   return (
-    <section
-      className="hero-block"
-      id="object"
-    >
-      <div className="hero-block__container">
+    <div className="hero-wrapper">
+      {/* Шапка с кнопками полностью удалена! */}
 
-        {/* ЛЕВАЯ ЧАСТЬ */}
-
-        <div className="hero-block__content">
-
-          <div className="hero-block__badge">
-            {badge}
+      {/* Бирюзовый баннер */}
+      <section className="hero-main">
+        <div className="hero-content">
+          <div className="hero-badge">{badge}</div>
+          <h1 className="hero-title">{title}</h1>
+          <p className="hero-description">{description}</p>
+          <div className="hero-actions">
+            <button className="hero-btn">{primaryButton}</button>
+            <button className="hero-btn">{secondaryButton}</button>
           </div>
-
-
-          <h1 className="hero-block__title">
-            {title}
-          </h1>
-
-
-          <p className="hero-block__description">
-            {description}
-          </p>
-
-
-          <div className="hero-block__info">
-
-            <div className="hero-block__info-item">
-              <div className="hero-block__info-icon">
-                ⌖
-              </div>
-
-              <div>
-                <span>
-                  Расположение
-                </span>
-
-                <strong>
-                  {location}
-                </strong>
-              </div>
-            </div>
-
-
-            <div className="hero-block__info-item">
-              <div className="hero-block__info-icon">
-                ◷
-              </div>
-
-              <div>
-                <span>
-                  Период
-                </span>
-
-                <strong>
-                  {years}
-                </strong>
-              </div>
-            </div>
-
-
-            <div className="hero-block__info-item">
-              <div className="hero-block__info-icon">
-                ♙
-              </div>
-
-              <div>
-                <span>
-                  Команда
-                </span>
-
-                <strong>
-                  {team}
-                </strong>
-              </div>
-            </div>
-
-          </div>
-
-
-          <div className="hero-block__actions">
-
-            <a
-              href="#media"
-              className="
-                hero-block__button
-                hero-block__button--primary
-              "
-            >
-              {primaryButton}
-            </a>
-
-
-            <button
-              type="button"
-              className="
-                hero-block__button
-                hero-block__button--secondary
-              "
-            >
-              {secondaryButton}
-            </button>
-
-          </div>
-
         </div>
-
-
-        {/* ПРАВАЯ ЧАСТЬ */}
-
-        <div className="hero-block__visual">
-
+        
+        <div className="hero-visual">
           {image ? (
-            <img
-              src={image}
-              alt={title}
-              className="hero-block__image"
-            />
+            <img src={image} alt={title} className="hero-img" />
           ) : (
-            <div className="hero-block__placeholder">
-
-              <div className="hero-block__placeholder-icon">
-                ▧
-              </div>
-
-              <strong>
-                <img src="/main_photo.jpg"
-                alt="Главное фото объекта" />
-              </strong>
-
-              <span>
-                Добавьте фотографию здания
-              </span>
-
+            <div className="hero-placeholder">
+              <span>Здесь будет фото</span>
             </div>
           )}
-
         </div>
+      </section>
 
-      </div>
-    </section>
+      {/* Блок Авторы проекта */}
+      <section className="hero-authors">
+        <h2 className="hero-authors-title">Авторы проекта</h2>
+        <div className="hero-authors-grid">
+          {authors.map((author, index) => (
+            <div key={index} className="hero-author">
+              <div className="hero-author-role">{author.role}</div>
+              <div className="hero-author-name">{author.name}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }

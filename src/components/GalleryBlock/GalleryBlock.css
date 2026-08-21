@@ -1,34 +1,43 @@
+/* Внешний бирюзовый контейнер */
 .gallery-block {
+  background-color: #2AA79B; /* Цвет из макета */
+  border-radius: 30px;       /* Большое скругление углов */
+  padding: 30px;             /* Отступы от краев до фотографий */
+  
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+  gap: 20px;                 /* Расстояние между фотографиями */
 }
 
+/* Стили для самих фотографий */
 .gallery-block__item {
-  aspect-ratio: 4 / 3;
-
+  aspect-ratio: 4 / 3;       /* Пропорции 4:3 как в макете */
+  
+  /* Заглушка, пока нет настоящих фото */
+  background-color: #eef5f5;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 20px;
-
-  background: #eef5f5;
-  border: 2px dashed #259da8;
-
   color: #259da8;
-
   font-weight: 700;
+  
+  /* Чтобы картинка не вылезала за скругления */
+  overflow: hidden; 
 }
 
+/* Адаптивность для планшетов (2 колонки) */
 @media (max-width: 900px) {
   .gallery-block {
     grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
   }
 }
 
+/* Адаптивность для телефонов (1 колонка) */
 @media (max-width: 500px) {
   .gallery-block {
     grid-template-columns: 1fr;
+    padding: 15px;
   }
 }

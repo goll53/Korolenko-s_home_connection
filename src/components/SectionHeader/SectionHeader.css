@@ -7,7 +7,8 @@
 
   background: rgba(255, 255, 255, 0.95);
 
-  border-bottom: 1px solid #e5e7eb;
+  /* Adjusted to match the design's Gray color (#D9D9D9) */
+  border-bottom: 1px solid #d9d9d9;
 
   backdrop-filter: blur(12px);
 }
@@ -48,7 +49,7 @@
 
   border-radius: 14px;
 
-  background: #259da8;
+  background: #259da8; /* Turquoise */
 
   color: white;
 
@@ -64,7 +65,7 @@
 }
 
 .header__logo-text strong {
-  color: #05285c;
+  color: #05285c; /* Navy */
 
   font-size: 16px;
 }
@@ -72,9 +73,12 @@
 .header__logo-text span {
   margin-top: 4px;
 
-  color: #818181;
+  /* Adjusted to match the design's Gray color (#D9D9D9) */
+  color: #d9d9d9;
 
-  font-size: 12px;
+  /* Updated font size to match standard paragraph text (16px / Regular) */
+  font-size: 16px;
+  font-weight: 400;
 }
 
 
@@ -90,18 +94,21 @@
 .header__nav a {
   position: relative;
 
-  color: #333333;
+  /* Adjusted to match the design's Dark text color (#353535) */
+  color: #353535;
 
   text-decoration: none;
 
-  font-size: 14px;
-  font-weight: 600;
+  /* Updated to match the design's body typography (16px / Regular) */
+  font-size: 16px;
+  font-weight: 400;
 
   transition: 0.2s;
 }
 
 .header__nav a:hover {
-  color: #259da8;
+  /* Dynamic alternative: change to brand Orange (#FF8039) on hover for high contrast */
+  color: #ff8039;
 }
 
 .header__nav a::after {
@@ -115,7 +122,8 @@
   width: 0;
   height: 2px;
 
-  background: #259da8;
+  /* Match the hover accent color */
+  background: #ff8039;
 
   transition: 0.2s;
 }
@@ -136,7 +144,7 @@
 
   border-radius: 12px;
 
-  background: #05285c;
+  background: #05285c; /* Navy */
 
   color: white;
 
@@ -148,6 +156,7 @@
 }
 
 .header__button:hover {
+  /* Updated hover state to use brand Turquoise (#259DA8) */
   background: #259da8;
 }
 
@@ -178,7 +187,8 @@
   .header__button {
     padding: 10px 16px;
 
-    font-size: 13px;
+    /* Scaled down cleanly relative to the new 16px base size */
+    font-size: 14px;
   }
 
 }
