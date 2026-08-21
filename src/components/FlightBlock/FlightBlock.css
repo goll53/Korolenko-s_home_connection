@@ -1,0 +1,67 @@
+.flight-block {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flight-block__title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.flight-block__subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  max-width: 600px;
+}
+
+/* Темный блок с кнопкой */
+.flight-block__player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Сохраняет пропорции как на макете */
+  
+  background-color: #0f172a; /* Темно-синий фон */
+  border-radius: 20px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Кнопка Play */
+.flight-block__play-btn {
+  width: 90px;
+  height: 90px;
+  background-color: #2563eb; /* Синий цвет */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.flight-block__play-btn:hover {
+  transform: scale(1.05);
+  background-color: #1d4ed8;
+}
+
+/* Белый треугольник */
+.flight-block__play-icon {
+  width: 0;
+  height: 0;
+  
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 30px solid #ffffff;
+  
+  margin-left: 6px;
+}
