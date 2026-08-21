@@ -8,8 +8,15 @@ export default function HeroBlock({
   image = myPhoto,
   primaryButton = "Смотреть видео",
   secondaryButton = "История дома",
+
+  authors = [
+    { role: "Менеджер", name: "Маранова Милослава" },
+    { role: "Разработчики", name: "Харюк Андрей " },
+    { role: "Дизайнер", name: "Николаенко Ирина" },
+  ],
 }) {
   return (
+
     <div className="hero-wrapper">
       
       {/* Бирюзовый баннер */}

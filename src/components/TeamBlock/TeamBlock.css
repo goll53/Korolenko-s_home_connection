@@ -6,39 +6,59 @@
 
 .team-block__member {
   text-align: center;
-
-  background: white;
-  padding: 24px;
-
+  background: #ffffff;
+  padding: 32px 24px;
   border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.2s ease;
 }
 
+.team-block__member:hover {
+  transform: translateY(-4px);
+}
+
+/* Контейнер для фото */
 .team-block__avatar {
-  width: 100px;
-  height: 100px;
-
-  margin: 0 auto 16px;
-
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   border-radius: 50%;
-
-  background: #e8f6f6;
-  border: 2px dashed #259da8;
-
-  color: #259da8;
+  background: #E8F6F6; 
+  /* Убираем пунктирную рамку, так как теперь там реальное фото */
+  border: none; 
+  
+  /* Важно! Чтобы фото не вылезало за круг */
+  overflow: hidden; 
 }
 
+/* Стили для самого тега картинки */
+.team-block__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Заполняет круг, обрезая лишнее по краям */
+  display: block;
+}
+
+/* Имя сотрудника */
 .team-block__member h3 {
   margin: 0;
-  color: #05285c;
+  color: #05285C;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
+/* Должность */
 .team-block__member p {
   margin: 8px 0 0;
-  color: #777;
+  color: #777777;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 @media (max-width: 700px) {
