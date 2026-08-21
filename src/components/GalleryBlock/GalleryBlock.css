@@ -44,7 +44,6 @@
   background-color: transparent; /* Или #ffffff, если нужна белая подложка */
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Мягкая тень для эффекта карточек */
 }
 
 /* Применяем скругление к самим картинкам внутри стека (если не меняли JSX) */
