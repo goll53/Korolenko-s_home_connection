@@ -4,49 +4,60 @@ import "./ObjectMediaBlock.css";
 
 import LegoSection from "../LegoSection/LegoSection";
 
+import ModelViewer from "../ModelViewer/ModelViewer";
+
+import OrthophotoViewer from "../OrthophotoViewer/OrthophotoViewer";
+import PointCloudViewer from "../PointCloudViewer/PointCloudViewer";
+
 
 
 const slides = [
   {
     id: "orthophoto",
 
+    type: "orthophoto",
+
     title: "Ортофотоплан",
 
     description:
-      "Здесь разместите ортофотоплан территории объекта.",
+      "Ортофотоплан территории объекта.",
 
     icon: "⌖",
 
-    placeholder:
-      "Тут ортофотоплан",
+    src:
+      `${import.meta.env.BASE_URL}models/house/orthophoto.jpg`,
   },
 
   {
     id: "model",
 
+    type: "model",
+
     title: "3D-модель",
 
     description:
-      "Здесь будет интерактивная 3D-модель объекта.",
+      "Интерактивная фотограмметрическая модель объекта.",
 
     icon: "◇",
 
-    placeholder:
-      "Тут 3D-модель",
+    src:
+      `${import.meta.env.BASE_URL}models/house/model.fbx`,
   },
 
   {
     id: "point-cloud",
 
+    type: "pointcloud",
+
     title: "Облако точек",
 
     description:
-      "Здесь можно разместить облако точек фотограмметрии.",
+      "Пространственное облако точек, полученное в результате фотограмметрической обработки.",
 
     icon: "✦",
 
-    placeholder:
-      "Тут облако точек",
+    src:
+      `${import.meta.env.BASE_URL}models/house/cloud.pts`,
   },
 ];
 
@@ -157,24 +168,37 @@ export default function ObjectMediaBlock() {
 
             <div className="object-media__content">
 
-              <div className="object-media__placeholder">
+  {activeSlide.type ===
+    "orthophoto" && (
 
-                <div className="object-media__placeholder-icon">
-                  {activeSlide.icon}
-                </div>
+    <OrthophotoViewer
+      src={activeSlide.src}
+    />
 
-                <strong>
-                  {activeSlide.placeholder}
-                </strong>
+  )}
 
-                <span>
-                  Замените этот блок
-                  настоящим материалом
-                </span>
 
-              </div>
+  {activeSlide.type ===
+    "model" && (
 
-            </div>
+    <ModelViewer
+      src={activeSlide.src}
+    />
+
+  )}
+
+
+  {activeSlide.type ===
+    "pointcloud" && (
+
+    <PointCloudViewer
+      src={activeSlide.src}
+      maxPoints={250000}
+    />
+
+  )}
+
+</div>
 
 
             <button

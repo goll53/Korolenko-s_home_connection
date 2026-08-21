@@ -3,8 +3,7 @@
 
   overflow: hidden;
 
-  /* Заменено на Gray из палитры */
-  border: 1px solid #d9d9d9;
+  border: 1px solid #dfe5e8;
 
   border-radius: 28px;
 
@@ -27,12 +26,10 @@
 
   overflow-x: auto;
 
-  /* Заменено на Gray из палитры */
   border-bottom:
-    1px solid #d9d9d9;
+    1px solid #e7ebed;
 
-  /* Заменено на Gray из палитры */
-  background: #d9d9d9;
+  background: #f7f9fa;
 }
 
 .object-media__tab {
@@ -51,7 +48,6 @@
 
   background: transparent;
 
-  /* Заменено на Navy из палитры */
   color: #05285c;
 
   font-weight: 700;
@@ -62,13 +58,10 @@
 }
 
 .object-media__tab:hover {
-  /* Заменено на Orange из палитры для активного ховера */
-  background: #ff8039;
-  color: white;
+  background: #e8f4f4;
 }
 
 .object-media__tab--active {
-  /* Заменено на Turquoise из палитры */
   background: #259da8;
 
   color: white;
@@ -87,8 +80,7 @@
   display: flex;
   align-items: center;
 
-  /* Заменено на Gray из палитры */
-  background: #d9d9d9;
+  background: #edf5f5;
 }
 
 .object-media__content {
@@ -119,7 +111,7 @@
     radial-gradient(
       circle at center,
       #ffffff,
-      #d9d9d9 /* Заменено на Gray из палитры */
+      #edf6f6
     );
 }
 
@@ -141,22 +133,19 @@
     0 10px 35px
     rgba(0, 0, 0, 0.08);
 
-  /* Заменено на Turquoise из палитры */
   color: #259da8;
 
   font-size: 40px;
 }
 
 .object-media__placeholder strong {
-  /* Заменено на Navy из палитры */
   color: #05285c;
 
   font-size: 30px;
 }
 
 .object-media__placeholder span {
-  /* Заменено на Dark из палитры */
-  color: #353535;
+  color: #828282;
 
   font-size: 15px;
 }
@@ -187,7 +176,6 @@
   background:
     rgba(255, 255, 255, 0.92);
 
-  /* Заменено на Navy из палитры */
   color: #05285c;
 
   font-size: 24px;
@@ -222,7 +210,6 @@
 }
 
 .object-media__counter {
-  /* Заменено на Turquoise из палитры */
   color: #259da8;
 
   font-size: 12px;
@@ -235,7 +222,6 @@
   margin:
     6px 0 4px;
 
-  /* Заменено на Navy из палитры */
   color: #05285c;
 
   font-size: 22px;
@@ -244,8 +230,7 @@
 .object-media__info p {
   margin: 0;
 
-  /* Заменено на Dark из палитры */
-  color: #353535;
+  color: #777;
 
   line-height: 1.5;
 }
@@ -269,8 +254,7 @@
 
   border-radius: 50%;
 
-  /* Заменено на Gray из палитры */
-  background: #d9d9d9;
+  background: #cdd5d8;
 
   cursor: pointer;
 
@@ -282,7 +266,6 @@
 
   border-radius: 10px;
 
-  /* Заменено на Turquoise из палитры */
   background: #259da8;
 }
 
